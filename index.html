@@ -105,9 +105,32 @@ body {
     }
 }
 
+/* GLOWING GOLDEN ANCHOR */
+
 .anchor {
-    font-size: 65px;
-    color: var(--gold);
+    font-size: 72px;
+    color: #f5d58a;
+    display: inline-block;
+
+    text-shadow:
+        0 0 8px rgba(245, 213, 138, 0.8),
+        0 0 20px rgba(214, 173, 98, 0.6);
+
+    animation: anchorGlow 3s ease-in-out infinite alternate;
+}
+
+/* ANCHOR GLOW ANIMATION */
+
+@keyframes anchorGlow {
+    from {
+        transform: scale(1);
+        text-shadow: 0 0 5px rgba(245, 213, 138, 0.5);
+    }
+
+    to {
+        transform: scale(1.08);
+        text-shadow: 0 0 18px rgba(245, 213, 138, 1);
+    }
 }
 
 .small-title {
