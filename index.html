@@ -35,17 +35,33 @@ body {
 /* OPENING SCREEN */
 
 .hero {
-    height: 100vh;
-    min-height: 650px;
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background:
-    linear-gradient(rgba(9, 27, 56, 0.20), rgba(9, 27, 56, 0.20)),
-    url('yacht-dubai.png') center center / 100% 100% no-repeat;
+    background-color: #091b38;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('yacht-dubai.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    padding: 20px;
+    animation: appear 2s ease;
+    text-shadow: 0 2px 8px #000;
 }
 
 .hero-content {
