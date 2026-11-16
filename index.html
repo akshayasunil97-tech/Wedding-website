@@ -55,6 +55,19 @@ body {
     outline-offset: 5px;
     z-index: 4;
     pointer-events: none;
+    animation: frameShimmer 4s ease-in-out infinite alternate;
+}
+
+@keyframes frameShimmer {
+    from {
+        border-color: rgba(214, 173, 98, 0.45);
+        box-shadow: 0 0 3px rgba(214, 173, 98, 0.15);
+    }
+
+    to {
+        border-color: rgba(255, 223, 150, 1);
+        box-shadow: 0 0 15px rgba(214, 173, 98, 0.45);
+    }
 }
 .hero::before {
     content: "";
