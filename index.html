@@ -243,6 +243,27 @@ footer {
         padding: 60px 15px;
     }
 }
+    .hero-content {
+    isolation: isolate;
+}
+
+.hero-content::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 220px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(
+        ellipse,
+        rgba(255, 193, 77, 0.28),
+        transparent 70%
+    );
+    filter: blur(25px);
+    z-index: -1;
+    pointer-events: none;
+}
 </style>
 </head>
 
