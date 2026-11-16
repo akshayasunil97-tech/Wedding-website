@@ -19,9 +19,7 @@ href="https://akshayasunil97-tech.github.io/Wedding-website/yacht-dubai.png">
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     background: #091b38;
@@ -36,7 +34,7 @@ body {
     --white: #fffdf8;
 }
 
-/* OPENING SCREEN */
+/* HERO */
 
 .hero {
     min-height: 100vh;
@@ -49,14 +47,12 @@ body {
     background-color: #091b38;
 }
 
-/* LUXURY GOLDEN FRAME */
-
 .hero::after {
     content: "";
     position: absolute;
     inset: 18px;
-    border: 1px solid rgba(214, 173, 98, 0.85);
-    outline: 1px solid rgba(214, 173, 98, 0.4);
+    border: 1px solid rgba(214,173,98,.85);
+    outline: 1px solid rgba(214,173,98,.4);
     outline-offset: 5px;
     z-index: 4;
     pointer-events: none;
@@ -65,13 +61,12 @@ body {
 
 @keyframes frameShimmer {
     from {
-        border-color: rgba(214, 173, 98, 0.45);
-        box-shadow: 0 0 3px rgba(214, 173, 98, 0.15);
+        border-color: rgba(214,173,98,.45);
+        box-shadow: 0 0 3px rgba(214,173,98,.15);
     }
-
     to {
-        border-color: rgba(255, 223, 150, 1);
-        box-shadow: 0 0 15px rgba(214, 173, 98, 0.45);
+        border-color: rgba(255,223,150,1);
+        box-shadow: 0 0 15px rgba(214,173,98,.45);
     }
 }
 
@@ -94,46 +89,26 @@ body {
 }
 
 @keyframes yachtZoom {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.12); }
+    from { transform: scale(1); }
+    to { transform: scale(1.12); }
 }
 
 @keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-
-/* GLOWING GOLDEN ANCHOR */
 
 .anchor {
     font-size: 72px;
     color: #f5d58a;
     display: inline-block;
-
-    text-shadow:
-        0 0 8px rgba(245, 213, 138, 0.8),
-        0 0 20px rgba(214, 173, 98, 0.6);
-
+    text-shadow: 0 0 8px rgba(245,213,138,.8), 0 0 20px rgba(214,173,98,.6);
     animation: anchorGlow 3s ease-in-out infinite alternate;
 }
 
 @keyframes anchorGlow {
-    from {
-        transform: scale(1);
-        text-shadow: 0 0 5px rgba(245, 213, 138, 0.5);
-    }
-
-    to {
-        transform: scale(1.08);
-        text-shadow: 0 0 18px rgba(245, 213, 138, 1);
-    }
+    from { transform: scale(1); text-shadow: 0 0 5px rgba(245,213,138,.5); }
+    to { transform: scale(1.08); text-shadow: 0 0 18px rgba(245,213,138,1); }
 }
 
 .small-title {
@@ -145,15 +120,13 @@ body {
 
 .hero h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: clamp(65px, 12vw, 105px);
+    font-size: clamp(65px,12vw,105px);
     color: #f5d58a;
     font-weight: normal;
     margin: 25px 0;
-
-    text-shadow:
-        0 0 5px rgba(255, 215, 140, 0.8),
-        0 0 15px rgba(214, 173, 98, 0.7),
-        0 0 30px rgba(214, 173, 98, 0.4);
+    text-shadow: 0 0 5px rgba(255,215,140,.8),
+                 0 0 15px rgba(214,173,98,.7),
+                 0 0 30px rgba(214,173,98,.4);
 }
 
 .hero p {
@@ -161,12 +134,10 @@ body {
     line-height: 2;
 }
 
-/* OPEN INVITATION BUTTON */
-
 .open-btn {
     margin-top: 35px;
     padding: 16px 38px;
-    background: linear-gradient(135deg, #d6ad62, #f5d58a, #b88a42);
+    background: linear-gradient(135deg,#d6ad62,#f5d58a,#b88a42);
     border: 1px solid #f5d58a;
     border-radius: 3px;
     color: #091b38;
@@ -175,13 +146,13 @@ body {
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 0 15px rgba(214, 173, 98, 0.35);
-    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(214,173,98,.35);
+    transition: all .4s ease;
 }
 
 .open-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 25px rgba(255, 215, 140, 0.7);
+    box-shadow: 0 0 25px rgba(255,215,140,.7);
 }
 
 /* OCEAN */
@@ -192,7 +163,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 23%;
-    background: linear-gradient(#24466b, #07152b);
+    background: linear-gradient(#24466b,#07152b);
     border-top: 2px solid #b99758;
 }
 
@@ -206,9 +177,7 @@ body {
     animation: waves 7s ease-in-out infinite alternate;
 }
 
-@keyframes waves {
-    to { transform: translateX(-20px); }
-}
+@keyframes waves { to { transform: translateX(-20px); } }
 
 .ship {
     position: absolute;
@@ -225,9 +194,7 @@ body {
 
 /* INVITATION */
 
-#invitation {
-    display: none;
-}
+#invitation { display: none; }
 
 .section {
     padding: 85px 20px;
@@ -254,14 +221,14 @@ body {
     margin: 15px 0 25px;
 }
 
-/* LUXURY GOLD DIVIDERS */
+/* GOLD DIVIDERS */
 
 .gold-divider {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    width: min(85%, 450px);
+    width: min(85%,450px);
     margin: 35px auto;
 }
 
@@ -270,13 +237,7 @@ body {
     content: "";
     height: 1px;
     flex: 1;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        var(--gold),
-        var(--light-gold),
-        var(--gold)
-    );
+    background: linear-gradient(90deg,transparent,var(--gold),var(--light-gold),var(--gold));
     background-size: 200% 100%;
     animation: dividerGlow 4s linear infinite;
 }
@@ -284,28 +245,21 @@ body {
 .gold-divider span {
     color: var(--gold);
     font-size: 17px;
-    text-shadow: 0 0 8px rgba(214, 173, 98, 0.5);
+    text-shadow: 0 0 8px rgba(214,173,98,.5);
     animation: diamondGlow 3s ease-in-out infinite alternate;
 }
 
 @keyframes dividerGlow {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
+    from { background-position: 0% 50%; }
+    to { background-position: 200% 50%; }
 }
 
 @keyframes diamondGlow {
-    from {
-        opacity: 0.65;
-        transform: rotate(45deg) scale(0.8);
-    }
-
-    to {
-        opacity: 1;
-        transform: rotate(45deg) scale(1.15);
-    }
+    from { opacity: .65; transform: rotate(45deg) scale(.8); }
+    to { opacity: 1; transform: rotate(45deg) scale(1.15); }
 }
 
-/* INVITATION CARDS */
+/* CARDS */
 
 .card {
     background: white;
@@ -322,10 +276,16 @@ body {
     font-size: 25px;
 }
 
-/* PREMIUM FAMILY TYPOGRAPHY */
+.card p {
+    color: #091b38 !important;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* FAMILY NAMES */
 
 .family-heading {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cinzel',serif;
     font-size: 13px;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -334,31 +294,22 @@ body {
 }
 
 .family-name {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(19px, 4vw, 25px);
+    font-family: 'Cinzel',serif;
+    font-size: clamp(19px,4vw,25px);
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 1.8;
     color: #9d762f;
-    text-shadow: 0 1px 1px rgba(214, 173, 98, 0.15);
 }
 
 .family-ampersand {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Great Vibes',cursive;
     font-size: 34px;
     color: var(--gold);
     margin: 5px 0;
 }
 
-/* CARD TEXT */
-
-.card p {
-    color: #091b38 !important;
-    line-height: 1.8;
-    font-size: 18px;
-}
-
-/* COUPLE PHOTO */
+/* PHOTO */
 
 .couple-photo {
     width: 90%;
@@ -375,7 +326,7 @@ body {
     margin-top: 25px;
 }
 
-/* INVITATION MESSAGE */
+/* MESSAGES */
 
 .invitation-message {
     max-width: 650px;
@@ -385,7 +336,12 @@ body {
     font-style: italic;
 }
 
-/* DRESS CODE */
+.closing-message {
+    max-width: 650px;
+    margin: 20px auto;
+    font-size: 22px;
+    line-height: 1.9;
+}
 
 .dress-code {
     display: inline-block;
@@ -397,17 +353,6 @@ body {
     font-size: 18px;
 }
 
-/* CLOSING MESSAGE */
-
-.closing-message {
-    max-width: 650px;
-    margin: 20px auto;
-    font-size: 22px;
-    line-height: 1.9;
-}
-
-/* COMPLIMENTS */
-
 .compliments {
     margin-top: 35px;
     color: var(--gold);
@@ -415,11 +360,120 @@ body {
     font-size: 17px;
 }
 
-/* FOOTER */
+/* LUXURY WEDDING TIMELINE */
 
-a {
-    color: var(--gold);
+.timeline {
+    max-width: 650px;
+    margin: 45px auto 20px;
+    position: relative;
+    padding: 20px 0;
 }
+
+/* Golden central line */
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #b88a42,
+        #f5d58a,
+        #b88a42,
+        transparent
+    );
+    box-shadow: 0 0 10px rgba(214,173,98,.35);
+}
+
+/* Sailing yacht */
+
+.timeline-yacht {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    font-size: 28px;
+    z-index: 3;
+    filter: drop-shadow(0 0 8px #d6ad62);
+    animation: yachtJourney 8s ease-in-out infinite;
+}
+
+@keyframes yachtJourney {
+    0%, 100% {
+        top: 10px;
+        transform: translateX(-50%) rotate(-5deg);
+    }
+    50% {
+        top: calc(100% - 40px);
+        transform: translateX(-50%) rotate(5deg);
+    }
+}
+
+/* Timeline event */
+
+.timeline-event {
+    position: relative;
+    width: 50%;
+    padding: 20px 35px;
+    text-align: right;
+}
+
+.timeline-event.reception {
+    margin-left: 50%;
+    text-align: left;
+}
+
+/* Golden marker */
+
+.timeline-marker {
+    position: absolute;
+    top: 28px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #f5d58a;
+    border: 3px solid #b88a42;
+    box-shadow: 0 0 15px rgba(214,173,98,.7);
+    z-index: 2;
+}
+
+.timeline-event.ceremony .timeline-marker {
+    right: -7px;
+}
+
+.timeline-event.reception .timeline-marker {
+    left: -7px;
+}
+
+.timeline-time {
+    font-family: 'Cinzel',serif;
+    color: #b88a42;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.timeline-event h3 {
+    color: #091b38;
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+.timeline-event p {
+    color: #091b38;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.timeline-location {
+    font-style: italic;
+}
+
+/* FOOTER */
 
 footer {
     background: var(--navy);
@@ -429,36 +483,7 @@ footer {
     line-height: 2;
 }
 
-/* MOBILE */
-
-@media (max-width: 600px) {
-    .section {
-        padding: 60px 15px;
-    }
-
-    .invitation-message {
-        font-size: 21px;
-    }
-
-    .closing-message {
-        font-size: 19px;
-    }
-
-    .card {
-        padding: 25px 15px;
-    }
-
-    .family-name {
-        font-size: 19px;
-    }
-
-    .gold-divider {
-        width: 90%;
-        margin: 28px auto;
-    }
-}
-
-/* GOLDEN GLOW */
+/* HERO GOLDEN GLOW */
 
 .hero-content::before {
     content: "";
@@ -467,67 +492,60 @@ footer {
     height: 220px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background: radial-gradient(
-        ellipse,
-        rgba(255, 193, 77, 0.28),
-        transparent 70%
-    );
+    transform: translate(-50%,-50%);
+    background: radial-gradient(ellipse,rgba(255,193,77,.28),transparent 70%);
     filter: blur(25px);
     z-index: -1;
     pointer-events: none;
 }
 
-/* FLOATING GOLDEN STARS */
+/* SPARKLES */
 
 .sparkle {
     position: absolute;
     width: 12px;
     height: 12px;
     background: #f5d58a;
-
-    clip-path: polygon(
-        50% 0%,
-        62% 38%,
-        100% 50%,
-        62% 62%,
-        50% 100%,
-        38% 62%,
-        0% 50%,
-        38% 38%
-    );
-
+    clip-path: polygon(50% 0%,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0% 50%,38% 38%);
     filter: drop-shadow(0 0 5px #e8c477);
     z-index: 2;
     pointer-events: none;
-
     animation: sparkleFloat 7s ease-in-out infinite;
 }
 
 @keyframes sparkleFloat {
-    0% {
-        transform: translateY(30px) scale(0.5) rotate(0deg);
-        opacity: 0;
+    0% { transform: translateY(30px) scale(.5) rotate(0deg); opacity: 0; }
+    25% { opacity: 1; transform: translateY(0) scale(1.3) rotate(45deg); }
+    50% { opacity: .4; transform: translateY(-40px) scale(.7) rotate(90deg); }
+    75% { opacity: 1; transform: translateY(-70px) scale(1.2) rotate(135deg); }
+    100% { transform: translateY(-100px) scale(.5) rotate(180deg); opacity: 0; }
+}
+
+/* MOBILE */
+
+@media (max-width:600px) {
+    .section { padding: 60px 15px; }
+    .invitation-message { font-size: 21px; }
+    .closing-message { font-size: 19px; }
+    .card { padding: 25px 15px; }
+    .family-name { font-size: 19px; }
+    .gold-divider { width: 90%; margin: 28px auto; }
+
+    .timeline-event {
+        padding: 20px 22px;
     }
 
-    25% {
-        opacity: 1;
-        transform: translateY(0) scale(1.3) rotate(45deg);
+    .timeline-event h3 {
+        font-size: 21px;
     }
 
-    50% {
-        opacity: 0.4;
-        transform: translateY(-40px) scale(0.7) rotate(90deg);
+    .timeline-event p {
+        font-size: 17px;
     }
 
-    75% {
-        opacity: 1;
-        transform: translateY(-70px) scale(1.2) rotate(135deg);
-    }
-
-    100% {
-        transform: translateY(-100px) scale(0.5) rotate(180deg);
-        opacity: 0;
+    .timeline-time {
+        font-size: 14px;
+        letter-spacing: 1px;
     }
 }
 
@@ -540,37 +558,33 @@ footer {
 
 <section class="hero" id="home">
 
-<span class="sparkle" style="top: 25%; left: 15%; animation-delay: 0s;"></span>
-<span class="sparkle" style="top: 65%; left: 25%; animation-delay: 2s;"></span>
-<span class="sparkle" style="top: 35%; left: 80%; animation-delay: 1s;"></span>
-<span class="sparkle" style="top: 75%; left: 85%; animation-delay: 3s;"></span>
-<span class="sparkle" style="top: 15%; left: 60%; animation-delay: 4s;"></span>
-<span class="sparkle" style="top: 85%; left: 50%; animation-delay: 2.5s;"></span>
-<span class="sparkle" style="top: 45%; left: 8%; animation-delay: 1.5s;"></span>
-<span class="sparkle" style="top: 55%; left: 92%; animation-delay: 3.5s;"></span>
-<span class="sparkle" style="top: 12%; left: 35%; animation-delay: 2s;"></span>
-<span class="sparkle" style="top: 88%; left: 20%; animation-delay: 4s;"></span>
-<span class="sparkle" style="top: 30%; left: 70%; animation-delay: 5s;"></span>
-<span class="sparkle" style="top: 70%; left: 65%; animation-delay: 1s;"></span>
-<span class="sparkle" style="top: 50%; left: 45%; animation-delay: 3s;"></span>
-<span class="sparkle" style="top: 20%; left: 90%; animation-delay: 4.5s;"></span>
-<span class="sparkle" style="top: 80%; left: 75%; animation-delay: 2.5s;"></span>
-<span class="sparkle" style="top: 40%; left: 55%; animation-delay: 5.5s;"></span>
+<span class="sparkle" style="top:25%;left:15%;animation-delay:0s;"></span>
+<span class="sparkle" style="top:65%;left:25%;animation-delay:2s;"></span>
+<span class="sparkle" style="top:35%;left:80%;animation-delay:1s;"></span>
+<span class="sparkle" style="top:75%;left:85%;animation-delay:3s;"></span>
+<span class="sparkle" style="top:15%;left:60%;animation-delay:4s;"></span>
+<span class="sparkle" style="top:85%;left:50%;animation-delay:2.5s;"></span>
+<span class="sparkle" style="top:45%;left:8%;animation-delay:1.5s;"></span>
+<span class="sparkle" style="top:55%;left:92%;animation-delay:3.5s;"></span>
+<span class="sparkle" style="top:12%;left:35%;animation-delay:2s;"></span>
+<span class="sparkle" style="top:88%;left:20%;animation-delay:4s;"></span>
+<span class="sparkle" style="top:30%;left:70%;animation-delay:5s;"></span>
+<span class="sparkle" style="top:70%;left:65%;animation-delay:1s;"></span>
+<span class="sparkle" style="top:50%;left:45%;animation-delay:3s;"></span>
+<span class="sparkle" style="top:20%;left:90%;animation-delay:4.5s;"></span>
+<span class="sparkle" style="top:80%;left:75%;animation-delay:2.5s;"></span>
+<span class="sparkle" style="top:40%;left:55%;animation-delay:5.5s;"></span>
 
 <div class="hero-content">
-
     <div class="anchor">⚓</div>
     <div class="small-title">A JOURNEY OF LOVE</div>
-
     <h1>Ashly & Esther</h1>
-
     <p>ANCHOR DOWN. HEARTS TOGETHER.</p>
     <p>30 DECEMBER 2026</p>
 
     <button class="open-btn" onclick="openInvitation()">
         OPEN INVITATION
     </button>
-
 </div>
 
 <div class="ocean">
@@ -584,202 +598,188 @@ footer {
 
 <main id="invitation">
 
-    <!-- FAMILY INVITATION -->
+<section class="section white-section">
 
-    <section class="section white-section">
+    <div class="gold-title">Together with our families</div>
+    <h2>We invite you</h2>
 
-        <div class="gold-title">Together with our families</div>
+    <p class="invitation-message">
+        You are invited to celebrate the beginning of our Forever Journey.
+    </p>
 
-        <h2>We invite you</h2>
+    <div class="gold-divider"><span>◆</span></div>
 
-        <p class="invitation-message">
-            You are invited to celebrate the beginning of our Forever Journey.
-        </p>
+    <div class="card">
 
-        <!-- GOLDEN DIVIDER -->
-        <div class="gold-divider"><span>◆</span></div>
-
-        <div class="card">
-
-            <div class="family-heading">The House of Groom</div>
-
-            <div class="family-name">Wilfred Antony Xavier</div>
-
-            <div class="family-ampersand">&</div>
-
-            <div class="family-name">Mary Sabeena Gomez</div>
-
-            <div class="gold-divider"><span>✦</span></div>
-
-            <div class="family-heading">The House of Bride</div>
-
-            <div class="family-name">Joseph K Baiju</div>
-
-            <div class="family-ampersand">&</div>
-
-            <div class="family-name">Mini Xavier</div>
-
-        </div>
-
-        <div class="gold-divider"><span>◆</span></div>
-
-        <img src="couple.jpg"
-             alt="Ashly and Esther"
-             class="couple-photo">
-
-        <div class="countdown" id="countdown"></div>
-
-    </section>
-
-    <!-- WEDDING MESSAGE -->
-
-    <section class="section">
-
-        <div class="gold-title">Our Forever Journey</div>
-
-        <h2>Two Hearts. One Journey.</h2>
-
-        <p class="invitation-message">
-            As we tie the knot and set sail towards a lifetime
-            of love and happiness.
-        </p>
+        <div class="family-heading">The House of Groom</div>
+        <div class="family-name">Wilfred Antony Xavier</div>
+        <div class="family-ampersand">&</div>
+        <div class="family-name">Mary Sabeena Gomez</div>
 
         <div class="gold-divider"><span>✦</span></div>
 
-    </section>
+        <div class="family-heading">The House of Bride</div>
+        <div class="family-name">Joseph K Baiju</div>
+        <div class="family-ampersand">&</div>
+        <div class="family-name">Mini Xavier</div>
 
-    <!-- WEDDING CEREMONY -->
+    </div>
 
-    <section class="section white-section">
+    <div class="gold-divider"><span>◆</span></div>
 
-        <div class="gold-title">The Beginning of Forever</div>
+    <img src="couple.jpg" alt="Ashly and Esther" class="couple-photo">
 
-        <h2>The Wedding</h2>
+    <div class="countdown" id="countdown"></div>
 
-        <div class="gold-divider"><span>◆</span></div>
+</section>
 
-        <div class="card">
+<!-- WEDDING MESSAGE -->
+
+<section class="section">
+
+    <div class="gold-title">Our Forever Journey</div>
+    <h2>Two Hearts. One Journey.</h2>
+
+    <p class="invitation-message">
+        As we tie the knot and set sail towards a lifetime
+        of love and happiness.
+    </p>
+
+    <div class="gold-divider"><span>✦</span></div>
+
+</section>
+
+<!-- WEDDING EVENTS -->
+
+<section class="section white-section">
+
+    <div class="gold-title">The Beginning of Forever</div>
+    <h2>The Wedding</h2>
+
+    <div class="gold-divider"><span>◆</span></div>
+
+    <!-- ANIMATED TIMELINE -->
+
+    <div class="timeline">
+
+        <div class="timeline-yacht">⛵</div>
+
+        <div class="timeline-event ceremony">
+
+            <div class="timeline-marker"></div>
+
+            <div class="timeline-time">3:00 PM</div>
 
             <h3>Wedding Ceremony</h3>
 
             <p>30 December 2026</p>
-            <p>3:00 PM</p>
-            <p>Infant Jesus Cathedral</p>
+
+            <p class="timeline-location">
+                Infant Jesus Cathedral
+            </p>
 
         </div>
 
-        <div class="gold-divider"><span>✦</span></div>
+        <div class="timeline-event reception">
 
-        <div class="card">
+            <div class="timeline-marker"></div>
+
+            <div class="timeline-time">6:00 PM</div>
 
             <h3>Wedding Reception</h3>
 
             <p>30 December 2026</p>
-            <p>6:00 PM</p>
-            <p>The Coast of Tiberios</p>
-            <p>Tangasseri</p>
+
+            <p class="timeline-location">
+                The Coast of Tiberios<br>
+                Tangasseri
+            </p>
 
         </div>
 
-        <div class="gold-divider"><span>◆</span></div>
+    </div>
 
-    </section>
+    <div class="gold-divider"><span>◆</span></div>
 
-    <!-- DRESS CODE -->
+</section>
 
-    <section class="section">
+<!-- DRESS CODE -->
 
-        <div class="gold-title">Dress to Celebrate</div>
+<section class="section">
 
-        <h2>Dress Code</h2>
+    <div class="gold-title">Dress to Celebrate</div>
+    <h2>Dress Code</h2>
 
-        <div class="gold-divider"><span>✦</span></div>
+    <div class="gold-divider"><span>✦</span></div>
 
-        <div class="dress-code">
-            ROYAL ATTIRE
-        </div>
+    <div class="dress-code">
+        ROYAL ATTIRE
+    </div>
 
-    </section>
+</section>
 
-    <!-- CLOSING MESSAGE -->
+<!-- CLOSING -->
 
-    <section class="section white-section">
+<section class="section white-section">
 
-        <div class="gold-title">Until We Meet</div>
+    <div class="gold-title">Until We Meet</div>
+    <h2>With Love</h2>
 
-        <h2>With Love</h2>
+    <div class="gold-divider"><span>◆</span></div>
 
-        <div class="gold-divider"><span>◆</span></div>
+    <p class="closing-message">
+        Love is the compass that guides us.
+        Thank you for being our crew on this special voyage.
+        We can't wait to celebrate with you!
+    </p>
 
-        <p class="closing-message">
-            Love is the compass that guides us.
-            Thank you for being our crew on this special voyage.
-            We can't wait to celebrate with you!
-        </p>
+    <div class="gold-divider"><span>✦</span></div>
 
-        <div class="gold-divider"><span>✦</span></div>
+    <h2>Ashly & Esther</h2>
 
-        <h2>Ashly & Esther</h2>
+    <div class="compliments">
+        BEST COMPLIMENTS<br>
+        AARON & AKSHAYA
+    </div>
 
-        <div class="compliments">
-            BEST COMPLIMENTS<br>
-            AARON & AKSHAYA
-        </div>
-
-    </section>
+</section>
 
 </main>
 
 <!-- FOOTER -->
 
 <footer>
-
     <p>ANCHOR DOWN. HEARTS TOGETHER.</p>
-
     <p>Ashly & Esther | 30.12.2026</p>
-
     <p>Thank you for being part of our journey.</p>
-
 </footer>
 
 <script>
 
 function openInvitation() {
-
     document.getElementById("invitation").style.display = "block";
-
     document.getElementById("invitation").scrollIntoView({
         behavior: "smooth"
     });
-
 }
 
 function updateCountdown() {
 
     const weddingDate = new Date("2026-12-30T15:00:00+05:30");
-
     const now = new Date();
-
     const difference = weddingDate - now;
-
     const element = document.getElementById("countdown");
 
     if (difference <= 0) {
-
         element.innerHTML = "The celebration has begun!";
-
         return;
-
     }
 
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-
     element.innerHTML = days + " Days Until Forever";
-
 }
 
 updateCountdown();
-
 setInterval(updateCountdown, 60000);
 
 </script>
