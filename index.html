@@ -44,7 +44,18 @@ body {
     text-align: center;
     background-color: #091b38;
 }
+/* LUXURY GOLDEN FRAME */
 
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(214, 173, 98, 0.85);
+    outline: 1px solid rgba(214, 173, 98, 0.4);
+    outline-offset: 5px;
+    z-index: 4;
+    pointer-events: none;
+}
 .hero::before {
     content: "";
     position: absolute;
