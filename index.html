@@ -1,1 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Ashly & Esther Wedding</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #0b1e3d;
+    color: white;
+    text-align: center;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#08152bcc,#0b1e3d),
+                url("couple.jpg") center/cover;
+}
+
+h1 {
+    color: #e4bd70;
+    font-size: 60px;
+    font-weight: normal;
+}
+
+button {
+    padding: 15px 30px;
+    background: transparent;
+    border: 1px solid #e4bd70;
+    color: #e4bd70;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+h2 {
+    color: #e4bd70;
+    font-size: 35px;
+}
+
+.gold {
+    color: #e4bd70;
+}
+
+#invitation {
+    display: none;
+}
+
+.card {
+    border: 1px solid #e4bd70;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+img {
+    width: 90%;
+    max-width: 350px;
+    border: 4px solid #e4bd70;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <p class="gold">⚓ OUR FOREVER JOURNEY BEGINS ⚓</p>
+
+    <h1>Ashly & Esther</h1>
+
+    <p>ARE GETTING MARRIED</p>
+
+    <p class="gold">30 DECEMBER 2026</p>
+
+    <button onclick="openInvitation()">
+        OPEN INVITATION
+    </button>
+</div>
+
+<div id="invitation">
+
+<section>
+    <h2>Anchor Down.<br>Hearts Together.</h2>
+
+    <p>With the blessings of our families,</p>
+    <p>we invite you to celebrate our wedding.</p>
+</section>
+
+<section>
+    <h2>Wedding Countdown</h2>
+
+    <h1 id="countdown" class="gold"></h1>
+</section>
+
+<section>
+    <div class="card">
+        <h2>The Wedding</h2>
+        <p>30 December 2026</p>
+        <p>3:00 PM</p>
+        <p>Infant Jesus Cathedral</p>
+    </div>
+
+    <div class="card">
+        <h2>The Royal Banquet</h2>
+        <p>30 December 2026</p>
+        <p>6:00 PM</p>
+        <p>The Coast of Tiberios</p>
+        <p>Tangasseri</p>
+    </div>
+</section>
+
+<section>
+    <h2>Our Beautiful Journey</h2>
+
+    <img src="couple.jpg" alt="Ashly and Esther">
+
+    <p>Forever begins with you ❤️</p>
+</section>
+
+<section>
+    <h2>Will You Join Us?</h2>
+
+    <p>We can't wait to celebrate with you!</p>
+
+    <a href="mailto:?subject=Wedding%20RSVP">
+        <button>RSVP</button>
+    </a>
+</section>
+
+</div>
+
+<script>
+function openInvitation() {
+    document.getElementById("invitation").style.display = "block";
+
+    document.getElementById("invitation")
+    .scrollIntoView({behavior: "smooth"});
+}
+
+function updateCountdown() {
+    const wedding = new Date("2026-12-30T15:00:00+05:30");
+    const now = new Date();
+
+    const difference = wedding - now;
+
+    if (difference <= 0) {
+        document.getElementById("countdown").innerHTML =
+        "Today is the special day! ❤️";
+        return;
+    }
+
+    const days = Math.floor(difference / 86400000);
+    const hours = Math.floor(difference / 3600000) % 24;
+    const minutes = Math.floor(difference / 60000) % 60;
+    const seconds = Math.floor(difference / 1000) % 60;
+
+    document.getElementById("countdown").innerHTML =
+    days + " Days " +
+    hours + " Hours " +
+    minutes + " Minutes " +
+    seconds + " Seconds";
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
