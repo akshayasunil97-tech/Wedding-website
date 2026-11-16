@@ -9,7 +9,7 @@ href="https://akshayasunil97-tech.github.io/Wedding-website/yacht-dubai.png">
 
 <title>Ashly & Esther | Forever Journey</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -32,6 +32,7 @@ body {
 :root {
     --navy: #091b38;
     --gold: #d6ad62;
+    --light-gold: #f5d58a;
     --white: #fffdf8;
 }
 
@@ -93,13 +94,8 @@ body {
 }
 
 @keyframes yachtZoom {
-    0% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1.12);
-    }
+    0% { transform: scale(1); }
+    100% { transform: scale(1.12); }
 }
 
 @keyframes appear {
@@ -211,9 +207,7 @@ body {
 }
 
 @keyframes waves {
-    to {
-        transform: translateX(-20px);
-    }
+    to { transform: translateX(-20px); }
 }
 
 .ship {
@@ -260,11 +254,62 @@ body {
     margin: 15px 0 25px;
 }
 
+/* LUXURY GOLD DIVIDERS */
+
+.gold-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: min(85%, 450px);
+    margin: 35px auto;
+}
+
+.gold-divider::before,
+.gold-divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        var(--light-gold),
+        var(--gold)
+    );
+    background-size: 200% 100%;
+    animation: dividerGlow 4s linear infinite;
+}
+
+.gold-divider span {
+    color: var(--gold);
+    font-size: 17px;
+    text-shadow: 0 0 8px rgba(214, 173, 98, 0.5);
+    animation: diamondGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes dividerGlow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+@keyframes diamondGlow {
+    from {
+        opacity: 0.65;
+        transform: rotate(45deg) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(45deg) scale(1.15);
+    }
+}
+
 /* INVITATION CARDS */
 
 .card {
     background: white;
-    padding: 30px 20px;
+    padding: 35px 25px;
     margin: 25px auto;
     max-width: 500px;
     border: 1px solid var(--gold);
@@ -276,6 +321,36 @@ body {
     margin-bottom: 15px;
     font-size: 25px;
 }
+
+/* PREMIUM FAMILY TYPOGRAPHY */
+
+.family-heading {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #b88a42;
+    margin-bottom: 22px;
+}
+
+.family-name {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(19px, 4vw, 25px);
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    color: #9d762f;
+    text-shadow: 0 1px 1px rgba(214, 173, 98, 0.15);
+}
+
+.family-ampersand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 34px;
+    color: var(--gold);
+    margin: 5px 0;
+}
+
+/* CARD TEXT */
 
 .card p {
     color: #091b38 !important;
@@ -371,6 +446,15 @@ footer {
 
     .card {
         padding: 25px 15px;
+    }
+
+    .family-name {
+        font-size: 19px;
+    }
+
+    .gold-divider {
+        width: 90%;
+        margin: 28px auto;
     }
 }
 
@@ -512,23 +596,32 @@ footer {
             You are invited to celebrate the beginning of our Forever Journey.
         </p>
 
+        <!-- GOLDEN DIVIDER -->
+        <div class="gold-divider"><span>◆</span></div>
+
         <div class="card">
 
-            <h3>The House of Groom</h3>
+            <div class="family-heading">The House of Groom</div>
 
-            <p>Wilfred Antony Xavier</p>
-            <p>&</p>
-            <p>Mary Sabeena Gomez</p>
+            <div class="family-name">Wilfred Antony Xavier</div>
 
-            <br>
+            <div class="family-ampersand">&</div>
 
-            <h3>The House of Bride</h3>
+            <div class="family-name">Mary Sabeena Gomez</div>
 
-            <p>Joseph K Baiju</p>
-            <p>&</p>
-            <p>Mini Xavier</p>
+            <div class="gold-divider"><span>✦</span></div>
+
+            <div class="family-heading">The House of Bride</div>
+
+            <div class="family-name">Joseph K Baiju</div>
+
+            <div class="family-ampersand">&</div>
+
+            <div class="family-name">Mini Xavier</div>
 
         </div>
+
+        <div class="gold-divider"><span>◆</span></div>
 
         <img src="couple.jpg"
              alt="Ashly and Esther"
@@ -551,6 +644,8 @@ footer {
             of love and happiness.
         </p>
 
+        <div class="gold-divider"><span>✦</span></div>
+
     </section>
 
     <!-- WEDDING CEREMONY -->
@@ -561,6 +656,8 @@ footer {
 
         <h2>The Wedding</h2>
 
+        <div class="gold-divider"><span>◆</span></div>
+
         <div class="card">
 
             <h3>Wedding Ceremony</h3>
@@ -570,6 +667,8 @@ footer {
             <p>Infant Jesus Cathedral</p>
 
         </div>
+
+        <div class="gold-divider"><span>✦</span></div>
 
         <div class="card">
 
@@ -582,6 +681,8 @@ footer {
 
         </div>
 
+        <div class="gold-divider"><span>◆</span></div>
+
     </section>
 
     <!-- DRESS CODE -->
@@ -591,6 +692,8 @@ footer {
         <div class="gold-title">Dress to Celebrate</div>
 
         <h2>Dress Code</h2>
+
+        <div class="gold-divider"><span>✦</span></div>
 
         <div class="dress-code">
             ROYAL ATTIRE
@@ -606,11 +709,15 @@ footer {
 
         <h2>With Love</h2>
 
+        <div class="gold-divider"><span>◆</span></div>
+
         <p class="closing-message">
             Love is the compass that guides us.
             Thank you for being our crew on this special voyage.
             We can't wait to celebrate with you!
         </p>
+
+        <div class="gold-divider"><span>✦</span></div>
 
         <h2>Ashly & Esther</h2>
 
