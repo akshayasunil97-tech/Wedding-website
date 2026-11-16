@@ -176,4 +176,156 @@ body {
     font-family: 'Great Vibes', cursive;
     font-size: 58px;
     font-weight: normal;
-    color: var(--gold
+    color: var(--gold);
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    margin: 25px auto;
+    max-width: 500px;
+    border: 1px solid var(--gold);
+    box-shadow: 0 5px 20px #0001;
+}
+
+.card h3 {
+    color: var(--navy);
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.card p {
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.couple-photo {
+    width: 90%;
+    max-width: 420px;
+    margin-top: 30px;
+    border: 5px solid var(--gold);
+}
+
+.countdown {
+    font-size: 24px;
+    color: var(--gold);
+    margin-top: 25px;
+}
+
+a {
+    color: var(--gold);
+}
+
+footer {
+    background: var(--navy);
+    padding: 35px 15px;
+    text-align: center;
+    color: var(--gold);
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding: 60px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="anchor">⚓</div>
+        <div class="small-title">A JOURNEY OF LOVE</div>
+
+        <h1>Ashly & Esther</h1>
+
+        <p>ANCHOR DOWN. HEARTS TOGETHER.</p>
+        <p>30 DECEMBER 2026</p>
+
+        <button class="open-btn" onclick="openInvitation()">
+            OPEN INVITATION
+        </button>
+    </div>
+
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="ship">⛵</div>
+    </div>
+</section>
+
+<main id="invitation">
+
+    <section class="section white-section">
+        <div class="gold-title">Together with our families</div>
+        <h2>We invite you</h2>
+        <p>To celebrate the beginning of our forever journey.</p>
+
+        <img src="couple.jpg" alt="Ashly and Esther"
+             class="couple-photo">
+
+        <div class="countdown" id="countdown"></div>
+    </section>
+
+    <section class="section">
+        <div class="gold-title">The Wedding Ceremony</div>
+        <h2>Join us</h2>
+
+        <div class="card">
+            <h3>Wedding Ceremony</h3>
+            <p>30 December 2026</p>
+            <p>3:00 PM</p>
+            <p>Infant Jesus Cathedral</p>
+        </div>
+
+        <div class="card">
+            <h3>Wedding Reception</h3>
+            <p>30 December 2026</p>
+            <p>6:00 PM</p>
+            <p>The Coast of Tiberios, Tangasseri</p>
+        </div>
+    </section>
+
+    <section class="section white-section">
+        <div class="gold-title">With love</div>
+        <h2>Ashly & Esther</h2>
+        <p>We look forward to celebrating with you!</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>ANCHOR DOWN. HEARTS TOGETHER.</p>
+    <p>Ashly & Esther | 30.12.2026</p>
+</footer>
+
+<script>
+function openInvitation() {
+    document.getElementById("invitation").style.display = "block";
+    document.getElementById("invitation").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function updateCountdown() {
+    const weddingDate = new Date("2026-12-30T15:00:00+05:30");
+    const now = new Date();
+    const difference = weddingDate - now;
+
+    const element = document.getElementById("countdown");
+
+    if (difference <= 0) {
+        element.innerHTML = "The celebration has begun!";
+        return;
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    element.innerHTML = days + " Days Until Forever";
+}
+
+updateCountdown();
+setInterval(updateCountdown, 60000);
+</script>
+
+</body>
+</html>
