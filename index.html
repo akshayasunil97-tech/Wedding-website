@@ -231,6 +231,15 @@ footer {
     }
 }
     .hero-content {
+        .hero-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 65% center;
+    z-index: 0;
+        }
     isolation: isolate;
 }
 
@@ -257,6 +266,13 @@ footer {
 <body>
 
 <section class="hero" id="home">
+
+    <img
+        class="hero-background"
+        src="https://akshayasunil97-tech.github.io/Wedding-website/yacht-dubai.png"
+        alt=""
+    >
+
     <div class="hero-content">
         <div class="anchor">⚓</div>
         <div class="small-title">A JOURNEY OF LOVE</div>
