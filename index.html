@@ -230,8 +230,8 @@ footer {
         padding: 60px 15px;
     }
 }
-    .hero-content {
-        .hero-background {
+
+.hero-background {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -239,7 +239,14 @@ footer {
     object-fit: cover;
     object-position: 65% center;
     z-index: 0;
-        }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    padding: 20px;
+    animation: appear 2s ease;
+    text-shadow: 0 2px 8px #000;
     isolation: isolate;
 }
 
